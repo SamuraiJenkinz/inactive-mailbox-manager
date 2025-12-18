@@ -86,3 +86,4 @@ exports/
 *.tmp
 *.temp
 nul
+.planning/
