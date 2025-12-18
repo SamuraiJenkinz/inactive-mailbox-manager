@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inactive-mailbox-manager"
+version = "0.1.0"
+description = "Enterprise-grade M365 inactive mailbox management tool"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "SamuraiJenkinz", email = "taylorkevo@gmail.com"}
+]
+keywords = ["microsoft365", "exchange", "mailbox", "management", "powershell"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Systems Administration",
+]
+
+dependencies = [
+    "msal>=1.24.0",
+    "pyyaml>=6.0",
+    "rich>=13.0.0",
+    "textual>=0.40.0",
+    "pandas>=2.0.0",
+    "openpyxl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+gui = [
+    "PyQt6>=6.5.0",
+    "customtkinter>=5.2.0",
+]
+
+[project.scripts]
+imm = "src.main:main"
+
+[project.urls]
+Homepage = "https://github.com/SamuraiJenkinz/inactive-mailbox-manager"
+Repository = "https://github.com/SamuraiJenkinz/inactive-mailbox-manager"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --cov=src --cov-report=term-missing"

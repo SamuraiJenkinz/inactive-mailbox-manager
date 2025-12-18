@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash([ -f package.json ])",
+      "Bash([ -f requirements.txt ])",
+      "Bash([ -f pyproject.toml ])",
+      "Bash(mkdir:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash([ -f C:/inactivemailboxes/.planning/PROJECT.md ])",
+      "Bash({ echo \"ERROR: No PROJECT.md found\")",
+      "Bash(exit 1)",
+      "Bash(})",
+      "Bash([ -f C:/inactivemailboxes/.planning/ROADMAP.md ])",
+      "WebSearch",
+      "Bash(python:*)",
+      "Bash(pip install:*)"
+    ]
+  }
+}

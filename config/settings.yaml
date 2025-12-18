@@ -1,0 +1,88 @@
+# Inactive Mailbox Manager Configuration
+# =========================================
+# Copy this file to customize settings. Environment variables override file values.
+# Environment variable format: IMM_<SECTION>_<KEY> (e.g., IMM_CONNECTION_TENANT_ID)
+
+connection:
+  # Azure AD tenant ID (required for authentication)
+  tenant_id: ""
+  # Client ID for Azure AD app registration (required)
+  client_id: ""
+  # Default number of mailboxes to retrieve per request
+  default_result_size: 10000
+  # Connection timeout in minutes before auto-disconnect
+  connection_timeout_minutes: 30
+  # Automatically reconnect on session timeout
+  auto_reconnect: true
+  # Maximum retry attempts for failed operations
+  max_retries: 3
+
+cost_analysis:
+  # License costs per month (USD)
+  license_costs:
+    E5: 38.00
+    E3: 20.00
+    E1: 10.00
+    F3: 10.00
+    Exchange_Online_Plan_1: 4.00
+    Exchange_Online_Plan_2: 8.00
+  # Currency for cost display
+  currency: "USD"
+  # Currency symbol
+  currency_symbol: "$"
+
+ui:
+  # Theme: brutalist_dark (default) or other custom themes
+  theme: "brutalist_dark"
+  # Default view mode: terminal or gui
+  default_view: "terminal"
+  # Rows per page in data tables
+  rows_per_page: 50
+  # Auto-refresh interval in minutes (0 to disable)
+  refresh_interval_minutes: 60
+  # Show confirmation dialogs for destructive operations
+  confirm_destructive: true
+
+cache:
+  # Enable local SQLite cache
+  enabled: true
+  # Refresh cache on application startup
+  refresh_on_startup: false
+  # Cache expiration time in hours
+  cache_duration_hours: 24
+  # Database file location (relative to app directory)
+  db_path: "data/imm_cache.db"
+
+audit:
+  # Enable audit logging
+  enabled: true
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_level: "INFO"
+  # Audit log retention in days
+  retention_days: 365
+  # Log file location
+  log_path: "logs/audit.log"
+  # Export audit logs to JSON format
+  json_format: true
+
+bulk_operations:
+  # Maximum mailboxes per batch operation
+  max_batch_size: 100
+  # Delay between operations in seconds (to avoid throttling)
+  delay_between_operations_seconds: 2
+  # Require confirmation for bulk operations
+  require_confirmation: true
+  # Stop on first error in batch
+  stop_on_error: false
+
+export:
+  # Default export format: xlsx, csv, json, pdf
+  default_format: "xlsx"
+  # Include charts in Excel exports
+  include_charts: true
+  # Export directory (relative to app directory)
+  export_path: "exports"
+  # Date format for exports
+  date_format: "%Y-%m-%d"
+  # Include timestamp in export filenames
+  timestamp_filenames: true

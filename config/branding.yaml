@@ -1,0 +1,98 @@
+# Inactive Mailbox Manager Branding Configuration
+# ================================================
+# Brutalist dark theme - terminal green on black for maximum density
+
+colors:
+  # Primary background - near black
+  background: "#0d0d0d"
+  # Primary foreground - terminal green
+  foreground: "#00ff00"
+  # Accent color - bright green
+  accent: "#00ff00"
+  # Secondary accent - dimmer green
+  accent_dim: "#008800"
+  # Error state - red
+  error: "#ff0000"
+  # Warning state - yellow
+  warning: "#ffff00"
+  # Success state - bright green
+  success: "#00ff00"
+  # Info state - cyan
+  info: "#00ffff"
+  # Muted text - gray
+  muted: "#666666"
+  # Selection highlight
+  selection: "#003300"
+  # Border color
+  border: "#00ff00"
+  # Header background
+  header_bg: "#001100"
+  # Table row alternating
+  row_alt: "#0a0a0a"
+
+fonts:
+  # Primary monospace font
+  primary: "Consolas"
+  # Fallback fonts
+  fallback:
+    - "Cascadia Mono"
+    - "Fira Code"
+    - "monospace"
+  # Font size in pixels
+  size: 14
+  # Line height multiplier
+  line_height: 1.4
+
+ui_elements:
+  # Border style: single, double, rounded, heavy, none
+  border_style: "single"
+  # Box characters for TUI
+  box_chars:
+    horizontal: "─"
+    vertical: "│"
+    top_left: "┌"
+    top_right: "┐"
+    bottom_left: "└"
+    bottom_right: "┘"
+    cross: "┼"
+    t_down: "┬"
+    t_up: "┴"
+    t_right: "├"
+    t_left: "┤"
+  # Scrollbar visibility
+  scrollbar_visible: true
+  # Animation speed (ms) - 0 to disable
+  animation_speed: 0
+
+status_indicators:
+  # Status symbols
+  connected: "●"
+  disconnected: "○"
+  loading: "◐"
+  success: "✓"
+  error: "✗"
+  warning: "⚠"
+  info: "ℹ"
+  # Progress bar characters
+  progress_filled: "█"
+  progress_empty: "░"
+
+branding:
+  # Application name
+  app_name: "Inactive Mailbox Manager"
+  # Short name for headers
+  short_name: "IMM"
+  # Version display format
+  version_format: "v{version}"
+  # Footer text
+  footer: "Press ? for help | Ctrl+Q to quit"
+  # ASCII art banner (optional)
+  banner: |
+    ╔═══════════════════════════════════════════════════════════╗
+    ║  ██╗███╗   ███╗███╗   ███╗                                ║
+    ║  ██║████╗ ████║████╗ ████║  Inactive Mailbox Manager      ║
+    ║  ██║██╔████╔██║██╔████╔██║  Enterprise M365 Management    ║
+    ║  ██║██║╚██╔╝██║██║╚██╔╝██║                                ║
+    ║  ██║██║ ╚═╝ ██║██║ ╚═╝ ██║  v0.1.0                        ║
+    ║  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝                                ║
+    ╚═══════════════════════════════════════════════════════════╝

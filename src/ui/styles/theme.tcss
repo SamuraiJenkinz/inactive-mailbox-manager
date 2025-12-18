@@ -1,0 +1,451 @@
+/* Brutalist Dark Theme for Inactive Mailbox Manager */
+
+/* Color Variables */
+$background: #1a1a1a;
+$surface: #2d2d2d;
+$surface-light: #3d3d3d;
+$primary: #00ff00;
+$primary-dim: #00aa00;
+$accent: #ff6600;
+$text: #e0e0e0;
+$text-muted: #888888;
+$text-dim: #666666;
+$error: #ff3333;
+$warning: #ffaa00;
+$success: #00ff00;
+$info: #3498db;
+
+/* Screen base */
+Screen {
+    background: $background;
+    color: $text;
+}
+
+/* Header styling */
+Header {
+    background: $surface;
+    color: $primary;
+    text-style: bold;
+    dock: top;
+    height: 3;
+}
+
+Header.-tall {
+    height: auto;
+}
+
+/* Footer styling */
+Footer {
+    background: $surface;
+    color: $text-muted;
+    dock: bottom;
+}
+
+FooterKey {
+    background: $surface-light;
+    color: $text;
+}
+
+FooterKey > .footer-key--key {
+    background: $primary-dim;
+    color: $background;
+    text-style: bold;
+}
+
+FooterKey > .footer-key--description {
+    color: $text-muted;
+}
+
+/* DataTable styling */
+DataTable {
+    background: $background;
+    color: $text;
+    height: 1fr;
+}
+
+DataTable > .datatable--header {
+    background: $surface;
+    color: $primary;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor {
+    background: $primary-dim;
+    color: $background;
+    text-style: bold;
+}
+
+DataTable > .datatable--hover {
+    background: $surface-light;
+}
+
+DataTable > .datatable--even-row {
+    background: $background;
+}
+
+DataTable > .datatable--odd-row {
+    background: #222222;
+}
+
+/* Input styling */
+Input {
+    background: $surface;
+    color: $text;
+    border: tall $surface-light;
+    padding: 0 1;
+}
+
+Input:focus {
+    border: tall $primary;
+}
+
+Input > .input--placeholder {
+    color: $text-dim;
+}
+
+/* Button styling */
+Button {
+    background: $surface;
+    color: $text;
+    border: tall $surface-light;
+    min-width: 16;
+}
+
+Button:hover {
+    background: $surface-light;
+    border: tall $primary;
+}
+
+Button:focus {
+    border: tall $primary;
+    text-style: bold;
+}
+
+Button.-primary {
+    background: $primary-dim;
+    color: $background;
+    border: tall $primary;
+}
+
+Button.-primary:hover {
+    background: $primary;
+}
+
+Button.-error {
+    background: $error;
+    color: $text;
+}
+
+/* Static text styling */
+Static {
+    color: $text;
+}
+
+Static.title {
+    color: $primary;
+    text-style: bold;
+    text-align: center;
+    width: 100%;
+    padding: 1 0;
+}
+
+Static.subtitle {
+    color: $text-muted;
+    text-align: center;
+    width: 100%;
+}
+
+Static.label {
+    color: $text-muted;
+    text-style: bold;
+}
+
+Static.value {
+    color: $text;
+}
+
+Static.error {
+    color: $error;
+}
+
+Static.warning {
+    color: $warning;
+}
+
+Static.success {
+    color: $success;
+}
+
+Static.info {
+    color: $info;
+}
+
+/* Label styling */
+Label {
+    color: $text-muted;
+    text-style: bold;
+    padding: 1 0 0 0;
+}
+
+/* Container styling */
+Container {
+    background: $background;
+}
+
+Container.panel {
+    background: $surface;
+    border: tall $surface-light;
+    padding: 1 2;
+    margin: 1;
+}
+
+/* Horizontal/Vertical layouts */
+Horizontal {
+    height: auto;
+}
+
+Vertical {
+    width: 100%;
+}
+
+/* ProgressBar styling */
+ProgressBar {
+    padding: 1 2;
+}
+
+ProgressBar > .bar--bar {
+    color: $primary;
+}
+
+ProgressBar > .bar--complete {
+    color: $success;
+}
+
+/* LoadingIndicator */
+LoadingIndicator {
+    color: $primary;
+}
+
+/* Select/Dropdown */
+Select {
+    background: $surface;
+    border: tall $surface-light;
+}
+
+Select:focus {
+    border: tall $primary;
+}
+
+SelectCurrent {
+    background: $surface;
+    color: $text;
+}
+
+SelectOverlay {
+    background: $surface;
+    border: tall $primary;
+}
+
+/* Checkbox and RadioButton */
+Checkbox {
+    background: transparent;
+    padding: 0 1;
+}
+
+Checkbox > .toggle--button {
+    background: $surface;
+    color: $text-muted;
+}
+
+Checkbox.-on > .toggle--button {
+    background: $primary-dim;
+    color: $background;
+}
+
+RadioButton {
+    background: transparent;
+}
+
+RadioSet {
+    background: transparent;
+}
+
+/* TabbedContent */
+TabbedContent {
+    background: $background;
+}
+
+Tabs {
+    background: $surface;
+}
+
+Tab {
+    background: $surface;
+    color: $text-muted;
+    padding: 1 2;
+}
+
+Tab:hover {
+    background: $surface-light;
+}
+
+Tab.-active {
+    background: $background;
+    color: $primary;
+    text-style: bold;
+}
+
+TabPane {
+    background: $background;
+    padding: 1;
+}
+
+/* Notification styling */
+Toast {
+    background: $surface;
+    color: $text;
+    border: tall $surface-light;
+}
+
+Toast.-information {
+    border: tall $info;
+}
+
+Toast.-warning {
+    border: tall $warning;
+}
+
+Toast.-error {
+    border: tall $error;
+}
+
+/* Custom classes */
+.status-bar {
+    background: $surface;
+    height: 1;
+    dock: bottom;
+    padding: 0 1;
+}
+
+.status-connected {
+    color: $success;
+}
+
+.status-disconnected {
+    color: $error;
+}
+
+.metric-card {
+    background: $surface;
+    border: tall $surface-light;
+    padding: 1 2;
+    margin: 0 1 1 0;
+    min-width: 20;
+}
+
+.metric-value {
+    color: $primary;
+    text-style: bold;
+    text-align: center;
+}
+
+.metric-label {
+    color: $text-muted;
+    text-align: center;
+}
+
+.hold-litigation {
+    color: $error;
+}
+
+.hold-ediscovery {
+    color: #9b59b6;
+}
+
+.hold-retention {
+    color: $info;
+}
+
+.hold-none {
+    color: $success;
+}
+
+/* Wizard styling */
+.wizard-step {
+    padding: 1 2;
+    margin: 1 0;
+}
+
+.wizard-step-active {
+    background: $surface;
+    border: tall $primary;
+}
+
+.wizard-step-complete {
+    color: $success;
+}
+
+.wizard-step-pending {
+    color: $text-dim;
+}
+
+/* Search bar */
+.search-container {
+    dock: top;
+    height: auto;
+    padding: 1;
+    background: $surface;
+}
+
+/* Main content area */
+.main-content {
+    height: 1fr;
+    padding: 0;
+}
+
+/* Scrollable container */
+.scrollable {
+    overflow-y: auto;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Section titles */
+.section-title {
+    color: $primary;
+    text-style: bold;
+    padding: 0 0 1 0;
+}
+
+/* Button row */
+.button-row {
+    height: auto;
+    padding: 1 0;
+    align: center middle;
+}
+
+.button-row Button {
+    margin: 0 1;
+}
+
+/* Grid layouts */
+#metrics-grid {
+    grid-size: 4;
+    grid-gutter: 1;
+    height: auto;
+    padding: 1;
+}
+
+/* Step indicator for wizards */
+#step-indicator {
+    height: auto;
+    padding: 1;
+    background: $surface;
+}
+
+#step-indicator Static {
+    padding: 0 2;
+}

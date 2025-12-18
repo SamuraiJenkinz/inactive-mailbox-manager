@@ -1,0 +1,80 @@
+# Inactive Mailbox Manager - Configuration Example
+# Copy this file to config.yaml and fill in your values
+
+# Azure AD Authentication
+azure:
+  # Your Azure AD tenant ID (GUID)
+  tenant_id: "your-tenant-id-here"
+
+  # Application (client) ID from your app registration
+  client_id: "your-client-id-here"
+
+  # Certificate authentication (recommended)
+  certificate_path: "path/to/certificate.pfx"
+  certificate_password: ""  # Leave empty if no password
+
+  # OR use client secret (less secure, comment out certificate options)
+  # client_secret: "your-client-secret-here"
+
+# Exchange Online Settings
+exchange:
+  # Your M365 organization domain
+  organization: "your-org.onmicrosoft.com"
+
+  # Number of mailboxes to fetch per API call
+  page_size: 1000
+
+  # Connection timeout in seconds
+  timeout: 300
+
+  # Auto-reconnect on session timeout
+  auto_reconnect: true
+  reconnect_attempts: 3
+
+# License Cost Configuration (monthly costs in your currency)
+costs:
+  e5_monthly: 38.00
+  e3_monthly: 20.00
+  f3_monthly: 10.00
+  default_license: "E3"
+
+# Cache Settings
+cache:
+  # Enable local SQLite cache
+  enabled: true
+
+  # Cache refresh interval in minutes
+  ttl_minutes: 60
+
+  # Cache database location
+  database_path: "data/cache.db"
+
+# Logging Configuration
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+
+  # Application log file
+  file: "logs/app.log"
+
+  # Audit log file (records all operations)
+  audit_file: "logs/audit.log"
+
+# UI Preferences
+ui:
+  # Theme: dark or light
+  theme: "dark"
+
+  # Items per page in lists
+  page_size: 50
+
+# Export Settings
+export:
+  # Default export format: xlsx, csv, pdf, json
+  default_format: "xlsx"
+
+  # Include headers in CSV exports
+  include_headers: true
+
+  # Default export directory
+  output_directory: "exports"
